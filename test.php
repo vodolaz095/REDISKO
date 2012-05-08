@@ -1,5 +1,5 @@
 <?php
-require_once '../tools/REDIS.php';
+require_once 'REDISKO.php';
 echo 'Setting variable rrr_test'.PHP_EOL;
 REDIS::set('rrr_test',222);
 echo 'Getting variable rr4r_test :';
