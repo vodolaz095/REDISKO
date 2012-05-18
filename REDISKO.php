@@ -103,7 +103,7 @@ class REDIS
                         $type='Empty';
                     }
 
-                $this->stats[]=array('command'=>trim($command),
+                $this->stats[]=array('command'=> trim($name.implode(' ',$args)),
                                      'time'   =>(1000*round((microtime(true)-$start), 6)),
                                      'type'   =>$type);
                 return $a;
@@ -114,7 +114,6 @@ class REDIS
             {
                 /* Parse the response based on the reply identifier */
                 $reply=trim(fgets($this->sock, 512));
-                //                die('>>>>>>'.$reply.'<<<<<<');
                 switch (substr($reply, 0, 1))
                 {
                     /* Error reply */
