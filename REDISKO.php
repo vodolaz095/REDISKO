@@ -103,7 +103,7 @@ class REDIS
                         $type='Empty';
                     }
 
-                $this->stats[]=array('command'=> trim($name.implode(' ',$args)),
+                $this->stats[]=array('command'=> trim(implode(' ',$args)),
                                      'time'   =>(1000*round((microtime(true)-$start), 6)),
                                      'type'   =>$type);
                 return $a;
