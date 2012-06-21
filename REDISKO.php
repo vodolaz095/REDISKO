@@ -13,7 +13,7 @@ class REDIS
 /*
  * Singleton get instanse
  */
-        private function init()
+        private static function init()
             {
                 if (is_null(self::$instance))
                     {
